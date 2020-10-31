@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3c98002-4cb2-4a1f-87a2-b49028c0a33b" name="Default Changelist" comment="" />
+    <list default="true" id="a3c98002-4cb2-4a1f-87a2-b49028c0a33b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcollins/TwilioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcollins/TwilioTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +61,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jULGoJBkcnpM6zUaeTAtrwsz00" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -65,6 +73,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3632184" />
@@ -79,8 +88,10 @@
       <ExternalSystemSettings>
         <option name="env">
           <map>
+            <entry key="MY_PHONE" value="+19166261463" />
             <entry key="TWILIO_ACCOUNT_SID" value="ACb5a2b6f0ab585e3151766ad186e9c3ab" />
             <entry key="TWILIO_AUTH_TOKEN" value="4dcffcdb15fc526914ab66fb91d61c20" />
+            <entry key="TWILIO_PHONE" value="+18643438319" />
           </map>
         </option>
         <option name="executionName" />
@@ -204,15 +215,15 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="178" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603853730266" />
-    <state x="506" y="297" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604091834342">
+    <state x="823" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604161023836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="506" y="297" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604091834342" />
+    <state x="823" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604161023836" />
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604013692906" />
-    <state x="602" y="341" key="EnvironmentVariablesDialog" timestamp="1604091833307">
+    <state x="1096" y="340" key="EnvironmentVariablesDialog" timestamp="1604161021338">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="602" y="341" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604091833307" />
+    <state x="1096" y="340" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604161021338" />
     <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1604092089480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
