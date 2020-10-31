@@ -1,0 +1,1 @@
+Z:\Projects\magic-stock-watcher\build\classes\java\main\com\bcollins\TwilioTest.class;Z:\Projects\magic-stock-watcher\build\classes\java\main\java\TwilioTest.class;Z:\Projects\magic-stock-watcher\build\classes\kotlin\main\com\bcollins\magicstockwatcher\Starter$Companion.class;Z:\Projects\magic-stock-watcher\build\classes\kotlin\main\com\bcollins\magicstockwatcher\Starter.class
