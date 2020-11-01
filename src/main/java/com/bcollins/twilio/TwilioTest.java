@@ -1,4 +1,4 @@
-package com.bcollins;
+package com.bcollins.twilio;
 
 import com.twilio.*;
 import com.twilio.rest.api.v2010.account.Message;

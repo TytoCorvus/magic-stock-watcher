@@ -1,6 +1,7 @@
 package com.bcollins.magicstockwatcher
 
-import com.bcollins.TwilioTest
+import com.bcollins.twilio.TwilioTest
+import com.bcollins.magicstockwatcher.web.ScryfallClient
 
 class Starter{
     companion object{
@@ -13,7 +14,12 @@ class Starter{
 
     constructor(){
         println("Some stuff")
-        TwilioTest().run("This is a test message!")
+
+        println(ScryfallClient().getCardInfoSync("Sol Ring"))
+//        println(ScryfallClient().getCardInfoSync("Lightning Bolt"))
+//        println(ScryfallClient().getCardInfoSync("Expansion // Explosion"))
+//        println(ScryfallClient().getCardInfoSync("Malakir Rebirth // Malakir Mire"))
+
         println("Done.")
     }
 }
