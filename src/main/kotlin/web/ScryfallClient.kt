@@ -16,12 +16,12 @@ class ScryfallClient {
         var supplier : ThirdPartyPriceSupplier = ThirdPartyPriceSupplier.SCRYFALL
     }
 
-    fun getCardInfoSync(cardName : String) : String{
+    fun getCardInfoSync(cardName : String) : Pair<Card, Price> ?{
         val encodedCardName : String = URLEncoder.encode(cardName, StandardCharsets.UTF_8.toString())
 
         var responseBody : String = HttpWrapper.sendRequest("https://${supplier.base_path}/cards/search?q=${encodedCardName}")
 
-        return parseFromValue(cardName, responseBody).toString()
+        return parseFromValue(cardName, responseBody)
     }
 
     private fun parseFromValue(cardName: String, responseAsJson : String) : Pair<Card, Price>?{
@@ -49,8 +49,10 @@ class ScryfallClient {
     private fun parseCardFromJsonObject(cardName:String, cardJson : JsonObject) : Card {
         return Card(cardName,
             cardJson.getAsJsonPrimitive("set").asString,
-            cardJson.getAsJsonPrimitive("set_name").asString ,
-            cardJson.getAsJsonPrimitive("collector_number").asInt )
+            cardJson.getAsJsonPrimitive("collector_number").asInt,
+            false,
+            "1"
+            )
     }
 
     private fun parsePriceFromJsonObject(priceJson : JsonObject) : Price {

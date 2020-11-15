@@ -4,7 +4,7 @@ import com.bcollins.magicstockwatcher.web.ThirdPartyPriceSupplier
 import java.time.LocalDateTime
 
 data class Position(var card : Card, var history : PriceHistory)
-data class Card(var name: String, var set: String, var setName: String, var collectorNumber: Int)
+data class Card(var name: String, var set: String, var collectorNumber: Int, var foil: Boolean, var databaseId: String)
 data class PriceHistory(var buyIn: Price, var daily: Price, var weekly: Price, var monthly: Price)
 
 data class Price(var normal: Value, var foil: Value,  var timestamp: LocalDateTime, var source: ThirdPartyPriceSupplier){
