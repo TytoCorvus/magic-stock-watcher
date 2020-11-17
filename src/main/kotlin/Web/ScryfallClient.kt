@@ -1,15 +1,12 @@
 package com.bcollins.magicstockwatcher.web
 
-import com.bcollins.magicstockwatcher.web.HttpWrapper
-import com.bcollins.magicstockwatcher.Card
-import com.bcollins.magicstockwatcher.Price
-import com.bcollins.magicstockwatcher.Value
+import com.bcollins.magicstockwatcher.ObjectModel.Card
+import com.bcollins.magicstockwatcher.ObjectModel.Price
+import com.bcollins.magicstockwatcher.ObjectModel.Value
 import com.google.gson.*
-import java.net.URI
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
-import java.util.*
 
 class ScryfallClient {
     companion object{
@@ -47,12 +44,12 @@ class ScryfallClient {
     }
 
     private fun parseCardFromJsonObject(cardName:String, cardJson : JsonObject) : Card {
-        return Card(cardName,
+        return Card(
+            cardName,
             cardJson.getAsJsonPrimitive("set").asString,
             cardJson.getAsJsonPrimitive("collector_number").asInt,
-            false,
-            "1"
-            )
+            cardJson.getAsJsonPrimitive("foil").asBoolean
+        )
     }
 
     private fun parsePriceFromJsonObject(priceJson : JsonObject) : Price {
@@ -61,7 +58,7 @@ class ScryfallClient {
 
         return Price(
             Value(normalPrice, null, null),
-            Value(foilPrice , null, null),
+            Value(foilPrice, null, null),
             LocalDateTime.now(),
             ThirdPartyPriceSupplier.SCRYFALL
         )

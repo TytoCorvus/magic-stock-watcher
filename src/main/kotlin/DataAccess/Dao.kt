@@ -14,7 +14,6 @@ class Dao{
         var db : MongoDatabase
 
         mongoClient = MongoClient("localhost", 27017)
-        println("Kotlin is now connected to MongoDB!")
         db = mongoClient.getDatabase(dbName)
 
         return db
