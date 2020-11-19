@@ -1,13 +1,29 @@
 package com.bcollins.magicstockwatcher.ObjectModel
 
-import com.bcollins.magicstockwatcher.web.ThirdPartyPriceSupplier
-import org.bson.Document
-import java.time.LocalDateTime
-import java.util.*
+import org.bson.*
+import java.time.Instant
 
-data class Position (val cardId : String , val number : Integer, val opened : Boolean, val buyPrice : Integer? = null, val entryDate : Date) : IMongoDoc{
+data class Position(val cardId: String, val number: Int, val opened: Boolean, val entryDate: Instant, val buyPrice: Double? = null) : IMongoDoc{
     override fun toDocument(): Document {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val doc = Document()
+        doc.put("cardId", cardId)
+        doc.put("number", number)
+        doc.put("opened", opened)
+        doc.put("entryDate", entryDate)
+        if(buyPrice != null)
+            doc.put("buyPrice", buyPrice)
+        return doc
+    }
+
+    fun toBsonDocument() : BsonDocument {
+        val doc = BsonDocument()
+        doc.put("cardId", BsonString(cardId))
+        doc.put("number", BsonInt32(number))
+        doc.put("opened", BsonBoolean(opened))
+        doc.put("entryDate", BsonDateTime(entryDate.toEpochMilli()))
+        if(buyPrice != null)
+            doc.put("buyPrice", BsonDouble(buyPrice))
+        return doc
     }
 }
 

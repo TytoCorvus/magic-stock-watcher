@@ -3,9 +3,12 @@ package com.bcollins.magicstockwatcher
 import com.bcollins.magicstockwatcher.DataAccess.CardDao
 import com.bcollins.magicstockwatcher.DataAccess.Dao
 import com.bcollins.magicstockwatcher.ObjectModel.Card
+import com.bcollins.magicstockwatcher.ObjectModel.Collector
+import com.bcollins.magicstockwatcher.ObjectModel.Position
 import com.bcollins.magicstockwatcher.ObjectModel.Price
-import com.bcollins.twilio.TwilioTest
 import com.bcollins.magicstockwatcher.web.ScryfallClient
+import com.mongodb.BasicDBObject
+import java.time.Instant
 
 class Starter{
     companion object{
@@ -17,6 +20,16 @@ class Starter{
 
     constructor(){
 
+        val dao = Dao()
+        val collection = dao.getDatabase("magic-stock-watcher").getCollection("collectors")
+
+        val position1 = Position("someRandomCardId",  5, false, Instant.now(), 3.49)
+        val position2 = Position("otherCard",  89043215, false, Instant.now(), 0.26)
+        val position3 = Position("thirdCard",  3, true, Instant.now())
+        val positionList = listOf(position1, position2, position3)
+        val collector = Collector("test collector", positionList)
+
+        val cursor = collection.insertOne(collector.toDocument())
     }
 
     fun insertCardsTest(){

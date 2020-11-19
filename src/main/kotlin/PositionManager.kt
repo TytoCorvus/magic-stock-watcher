@@ -1,15 +1,15 @@
 package com.bcollins.magicstockwatcher
 
 import com.bcollins.magicstockwatcher.DataAccess.CardDao
-import com.bcollins.magicstockwatcher.DataAccess.PositionDao
+import com.bcollins.magicstockwatcher.DataAccess.CollectorDao
 
 class PositionManager{
     val cardDao : CardDao
-    val positionDao : PositionDao
+    val collectorDao : CollectorDao
 
-    constructor(cardDao : CardDao, positionDao : PositionDao){
+    constructor(cardDao : CardDao, collectorDao : CollectorDao){
         this.cardDao = cardDao
-        this.positionDao = positionDao
+        this.collectorDao = collectorDao
     }
 
 

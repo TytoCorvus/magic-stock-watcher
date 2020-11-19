@@ -6,6 +6,7 @@ import com.bcollins.magicstockwatcher.ObjectModel.Value
 import com.google.gson.*
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
+import java.time.Instant
 import java.time.LocalDateTime
 
 class ScryfallClient {
@@ -58,8 +59,7 @@ class ScryfallClient {
 
         return Price(
             Value(normalPrice, null, null),
-            Value(foilPrice, null, null),
-            LocalDateTime.now(),
+            Instant.now(),
             ThirdPartyPriceSupplier.SCRYFALL
         )
     }

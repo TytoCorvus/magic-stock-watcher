@@ -1,5 +1,6 @@
 package com.bcollins.magicstockwatcher.ObjectModel
 
+import org.bson.BsonDocument
 import org.bson.Document
 
 
